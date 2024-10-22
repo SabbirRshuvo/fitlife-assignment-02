@@ -11,7 +11,6 @@ body{
     background: linear-gradient(180deg,rgba(17, 17, 17, 0.9),rgba(119, 119, 119, 0.7) 100%);
 }
 .container{
-    
     width: 80%;
     margin: 5rem auto;
 }
@@ -228,6 +227,68 @@ banner-section
 .hum-burger{
     display: none;
 }
+/* calculator section */
+.bmi-container{
+    display: flex;
+    justify-content: center;
+}
+.calculator-section{
+    background-color: rgb(34, 34, 34, 0.8);
+    padding: 70px;
+    border-radius: 20px;
+}
+.calculator-content{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.calculator-chart{
+    display: flex;
+}
+.table-container{
+    width: 100%;
+}
+
+.my-table {
+    border-collapse: collapse;
+}
+.table-container h2{
+    margin-bottom: 20px;
+}
+.table-container p{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.my-table th, .my-table td {
+    color: whitesmoke;
+    opacity: 0.8;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+}
+.select-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto), 1fr;
+    gap: 10px;
+}
+.select-container #option{
+    padding: 15px 10px;
+    border-radius: 15px;
+    font-size: 1rem;
+    background-color: rgb(34, 34, 34, 0.1);
+    color: white;
+    opacity: 0.8;
+}
+.full-width{
+    grid-column: 1 / -1;
+
+}
+.calculator-option button{
+    padding: 10px 40px;
+    margin: 20px 0;
+}
 
 /* responsive mobile design */
 @media screen and (max-width: 576px) {
@@ -283,5 +344,14 @@ banner-section
         flex-direction: column;
         text-align: center;
     }
-    
+    .calculator-chart{
+        flex-direction: column;
+        text-align: center;
+    }
+    .table-container{
+        margin: 20px 0;
+    }
+    .my-table th, .my-table td {
+        font-size: 14px;
+    }
 }
