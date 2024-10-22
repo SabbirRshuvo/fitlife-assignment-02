@@ -18,7 +18,7 @@ h1,h2,h3,h4,h5{
     color: white;
 }
 p{
-    font-size: 18px;
+    font-size: 1rem;
     line-height: normal;
     font-weight: normal;
     cursor: pointer;
@@ -108,7 +108,7 @@ banner-section
 .img-cart-2{
     position: absolute;
     top: 350px;
-    right: 350px;
+    right: 450px;
     border: 1px solid oldlace;
     border-radius: 12px;
     padding: 20px;
@@ -172,7 +172,7 @@ banner-section
 }
 .team-container{
     padding: 10px;
-    background-color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.2);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 18px;
@@ -197,6 +197,8 @@ banner-section
     padding: 3rem 0;
 }
 .footer-container{
+    align-items: center;
+    height: 300px;
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -223,6 +225,13 @@ banner-section
     font-weight: 800;
     font-style: italic;
     color: rgb(230, 83, 60);
+}
+.copyright{
+    width: 80%;
+    margin: 0 auto;
+}
+.copyright p{
+    margin: 20px 0;
 }
 
 .hum-burger{
@@ -274,6 +283,13 @@ banner-section
     grid-template-rows: repeat(2, auto), 1fr;
     gap: 10px;
 }
+.select-container input{
+    padding: 15px 10px;
+    border-radius: 15px;
+    background-color: rgb(33, 33, 33, 0.6);
+    border: 0;
+    font-size: 1rem;
+}
 .select-container #option{
     padding: 15px 10px;
     border-radius: 15px;
@@ -284,7 +300,6 @@ banner-section
 }
 .full-width{
     grid-column: 1 / -1;
-
 }
 .calculator-option button{
     padding: 10px 40px;
@@ -292,6 +307,13 @@ banner-section
 }
 
 /* subscription-section */
+.subscription-section h2, p{
+    text-align: center;
+    margin: 10px 0;
+}
+.subscription-section p{
+    margin-bottom: 50px;
+}
 .subscription-card{
     display: flex;
     justify-content: space-between;
@@ -357,8 +379,45 @@ banner-section
     border: none;
 }
 
+
+/* training section */
+.training-section{
+    text-align: center;
+}
+.training-section h2, p{
+    margin-bottom: 20px;
+}
+.training-section img{
+    width: 100%;
+    height: 300px;
+    filter: brightness(90%);
+}
+.row-1, .row-2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.trainer-card{
+    position: relative;
+}
+.trainer{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    color: rgba(255, 0, 0, 0.719);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.row-1{
+    grid-template-columns: 0.70fr 1.5fr 0.80fr;
+}
+.row-2{
+    grid-template-columns: 1.4fr 0.70fr 0.90fr;
+}
 /* responsive mobile design */
 @media screen and (max-width: 576px) {
+    .container{
+        padding: 25px;
+    }
     .hum-burger{
         display: block;
         color: white;
@@ -370,14 +429,21 @@ banner-section
         flex-direction: column;
         position: relative;
     }
+    .banner-content h1{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 12px;
+    }
     .banner-btn {
         display: flex;
+        flex-direction: column;
         font-size: 1rem;
         gap: 5px;
     }
     .img-cart-1{
         position: absolute;
-        top: 700px;
+        top: 500px;
         right: -10px;
         border: 1px solid oldlace;
         border-radius: 12px;
@@ -385,7 +451,7 @@ banner-section
     }
     .img-cart-2{
         position: absolute;
-        top: 900px;
+        top: 800px;
         right: 150px;
         border: 1px solid oldlace;
         border-radius: 12px;
@@ -393,6 +459,10 @@ banner-section
     }
     .habit-card{
         flex-direction: column;
+        margin: 10px 0;
+    }
+    .habit-content{
+        font-size: 1rem;
         margin: 10px 0;
     }
     .run-section{
@@ -433,6 +503,12 @@ banner-section
         width: 100%;
     }
     .select-container{
+        grid-template-columns: 1fr;
+    }
+    .copyright{
+        margin-top: 250px;
+    }
+    .row-1, .row-2{
         grid-template-columns: 1fr;
     }
 }
